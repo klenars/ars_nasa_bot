@@ -1,5 +1,3 @@
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -24,24 +22,24 @@ public class Main {
         }
 
 
-}
+    }
 
     static int getMessageId(String response) {
-        JsonElement jsonElement = JsonParser.parseString(response);
-        JsonObject jsonObject = jsonElement.getAsJsonObject();
-        JsonArray resultArray = jsonObject.getAsJsonArray("result");
-        JsonObject jsonObject2 = resultArray.get(0).getAsJsonObject();
-        JsonObject message = jsonObject2.getAsJsonObject("message");
-        return message.get("message_id").getAsInt();
+        return getMessage(response)
+                .get("message_id").getAsInt();
     }
 
     static int getChatId(String response) {
-        JsonElement jsonElement = JsonParser.parseString(response);
-        JsonObject jsonObject = jsonElement.getAsJsonObject();
-        JsonArray resultArray = jsonObject.getAsJsonArray("result");
-        JsonObject jsonObject2 = resultArray.get(0).getAsJsonObject();
-        JsonObject message = jsonObject2.getAsJsonObject("message");
-        JsonObject chat = message.getAsJsonObject("chat");
-        return chat.get("id").getAsInt();
+        return getMessage(response)
+                .getAsJsonObject("chat")
+                .get("id").getAsInt();
+    }
+
+    static JsonObject getMessage(String response) {
+        return JsonParser.parseString(response)
+                .getAsJsonObject()
+                .getAsJsonArray("result")
+                .get(0).getAsJsonObject()
+                .getAsJsonObject("message");
     }
 }
