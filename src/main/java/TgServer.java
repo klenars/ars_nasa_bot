@@ -21,7 +21,7 @@ public class TgServer {
             String requestBody = readRequestBody(exchange);
             exchange.sendResponseHeaders(200, 0);
             System.out.println(requestBody);
-            nasaBot.sendHello(requestBody);
+            nasaBot.updateHandler(requestBody);
 
         } catch (IOException e) {
             System.out.println("Запрос не прочитан!");

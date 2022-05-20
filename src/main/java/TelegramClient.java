@@ -27,10 +27,20 @@ public class TelegramClient {
         sendRequest(request);
     }
 
-    protected String sendMessage(String text, int chatId) {
+    protected String sendGetMe() {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .uri(URI.create(url + TOKEN + "/sendMessage" + "?chat_id=" + chatId + "&text=" + text))
+                .uri(URI.create(url + TOKEN + "/getMe"))
+                .version(HttpClient.Version.HTTP_1_1)
+                .build();
+        return sendRequest(request);
+    }
+
+    protected String sendMessage(String text, int chatId) {
+        HttpRequest request = HttpRequest.newBuilder()
+                .POST(HttpRequest.BodyPublishers.ofString("{\"text\":\"" + text + "\"}"))
+                .uri(URI.create(url + TOKEN + "/sendMessage" + "?chat_id=" + chatId))
+                .header("content-type", "application/json")
                 .version(HttpClient.Version.HTTP_1_1)
                 .build();
         return sendRequest(request);

@@ -26,6 +26,10 @@ class Message {
         return chat.getId();
     }
 
+    public String getText() {
+        return text;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
@@ -42,6 +46,13 @@ class User {
     private int id;
     private String first_name;
     private String username;
+
+    public String toPrint() {
+        return "Hi! I'm NASA telegram bot!" +
+                " My id: " + id +
+                ", my first_name: " + first_name +
+                ", my username: " + username;
+    }
 
     @Override
     public String toString() {
