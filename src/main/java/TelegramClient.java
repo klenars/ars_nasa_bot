@@ -1,5 +1,3 @@
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.IOException;
 import java.net.URI;
@@ -16,38 +14,21 @@ public class TelegramClient {
         TOKEN = "5081727056:AAHKOhlUXEzmGsMdfeDuloxwzefqZ-5FiKk";
         httpClient = HttpClient.newHttpClient();
         url = "https://api.telegram.org/bot";
+
+        setWebhook("https://1e91-188-32-138-21.eu.ngrok.io");
     }
 
-    public void sendHello() {
-        int lastMessageId = 0;
-
-        while (true) {
-            String response = getUpdates();
-            int message_id = getMessageId(response);
-            int chat_id = getChatId(response);
-            if (message_id != lastMessageId) {
-                sendMessage("Hello!", chat_id);
-                lastMessageId = message_id;
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private String getUpdates() {
+    private void setWebhook(String serverUrl) {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .uri(URI.create(url + TOKEN + "/getUpdates" + "?offset=-1"))
+                .uri(URI.create(url + TOKEN + "/setWebhook" + "?url=" + serverUrl))
                 .version(HttpClient.Version.HTTP_1_1)
                 .build();
 
-        return sendRequest(request);
+        sendRequest(request);
     }
 
-    private String sendMessage(String text, int chatId) {
+    protected String sendMessage(String text, int chatId) {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .uri(URI.create(url + TOKEN + "/sendMessage" + "?chat_id=" + chatId + "&text=" + text))
@@ -67,24 +48,5 @@ public class TelegramClient {
             e.printStackTrace();
         }
         return null;
-    }
-
-    private int getMessageId(String response) {
-        return getMessage(response)
-                .get("message_id").getAsInt();
-    }
-
-    private int getChatId(String response) {
-        return getMessage(response)
-                .getAsJsonObject("chat")
-                .get("id").getAsInt();
-    }
-
-    private JsonObject getMessage(String response) {
-        return JsonParser.parseString(response)
-                .getAsJsonObject()
-                .getAsJsonArray("result")
-                .get(0).getAsJsonObject()
-                .getAsJsonObject("message");
     }
 }

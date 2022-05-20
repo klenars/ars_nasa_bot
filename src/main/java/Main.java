@@ -1,11 +1,11 @@
+import java.io.IOException;
 
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        TelegramClient client = new TelegramClient();
+        new TgServer().start();
 
-        client.sendHello();
     }
 }
