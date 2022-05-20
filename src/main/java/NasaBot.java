@@ -1,17 +1,21 @@
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class NasaBot {
     private final TelegramClient telegramClient;
+    private final Gson gson;
 
     public NasaBot() {
         telegramClient = new TelegramClient();
+        gson = new Gson();
     }
 
     public void sendHello(String requestBody) {
         int chat_id = getChatId(requestBody);
-        telegramClient.sendMessage("Hello!", chat_id);
-
+        //telegramClient.sendMessage("Hello!", chat_id);
+        Update update = gson.fromJson(requestBody, Update.class);
+        System.out.println(update);
     }
 
     private int getChatId(String response) {

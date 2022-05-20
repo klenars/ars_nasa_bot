@@ -7,6 +7,5 @@ public class Main {
 
         new TgServer().start();
 
-//        System.out.println(NgrokClient.getPublicUrl());
     }
 }
