@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -15,7 +14,7 @@ public class TelegramClient {
         httpClient = HttpClient.newHttpClient();
         url = "https://api.telegram.org/bot";
 
-        setWebhook("https://1e91-188-32-138-21.eu.ngrok.io");
+        setWebhook(NgrokClient.getPublicUrl());
     }
 
     private void setWebhook(String serverUrl) {

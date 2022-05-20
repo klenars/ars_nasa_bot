@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="refactor: перенести все методы в Телеграмклиент">
-      <change afterPath="$PROJECT_DIR$/src/main/java/NasaBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TgServer.java" afterDir="false" />
+    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="refactor: Перевести бота на вебхук">
+      <change afterPath="$PROJECT_DIR$/src/main/java/NgrokClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NasaBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NasaBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TelegramClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelegramClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +84,7 @@
       <updated>1652882866086</updated>
       <workItem from="1652882868541" duration="16889000" />
       <workItem from="1652931907864" duration="4106000" />
-      <workItem from="1653040740529" duration="6623000" />
+      <workItem from="1653040740529" duration="12554000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1652883121976</created>
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652932695601</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor: Перевести бота на вебхук">
+      <created>1653049218079</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653049218079</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +149,7 @@
     <MESSAGE value="Create project" />
     <MESSAGE value="feat: сделать простого бота, который будет отвечать Hello на любое сообщение" />
     <MESSAGE value="refactor: перенести все методы в Телеграмклиент" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: перенести все методы в Телеграмклиент" />
+    <MESSAGE value="refactor: Перевести бота на вебхук" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Перевести бота на вебхук" />
   </component>
 </project>
