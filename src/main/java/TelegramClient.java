@@ -10,7 +10,7 @@ public class TelegramClient {
     private final String TOKEN;
 
     public TelegramClient() {
-        TOKEN = "5081727056:AAHKOhlUXEzmGsMdfeDuloxwzefqZ-5FiKk";
+        TOKEN = System.getenv("TG_TOKEN");
         httpClient = HttpClient.newHttpClient();
         url = "https://api.telegram.org/bot";
 

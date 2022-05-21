@@ -7,7 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class NgrokClient {
-    private static final String TOKEN = "29QmVn9e1QD2zRd1zNr7Xi5vD4E_2X95FRJPAhPhi7gRaSNZa";
+    private static final String TOKEN = System.getenv("Ngrok_TOKEN");
 
     static String getPublicUrl() {
         HttpClient client = HttpClient.newHttpClient();
