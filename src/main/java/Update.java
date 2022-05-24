@@ -49,9 +49,9 @@ class User {
 
     public String toPrint() {
         return "Hi! I'm NASA telegram bot!" +
-                " My id: " + id +
-                ", my first_name: " + first_name +
-                ", my username: " + username;
+                "\nid: " + id +
+                "\nfirst_name: " + first_name +
+                "\nmy username: " + username;
     }
 
     @Override
