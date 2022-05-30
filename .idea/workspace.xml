@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="feat: вынести настройки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BotConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BotConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NasaApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NasaApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NasaBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NasaBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NgrokClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NgrokClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TelegramClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelegramClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TgServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TgServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +104,8 @@
       <workItem from="1653714126818" duration="296000" />
       <workItem from="1653750779091" duration="783000" />
       <workItem from="1653852502169" duration="246000" />
-      <workItem from="1653893733275" duration="10954000" />
+      <workItem from="1653893733275" duration="11723000" />
+      <workItem from="1653979612574" duration="279000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1652883121976</created>
@@ -183,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653932781889</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: вынести настройки">
+      <created>1653938626703</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653938626719</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
