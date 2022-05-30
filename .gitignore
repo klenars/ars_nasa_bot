@@ -36,4 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
 !/src/main/java/Settings.java
+!/.idea/
+!/src/main/resources/config.properties

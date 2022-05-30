@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 
@@ -11,7 +12,7 @@ public class TgServer {
 
     public TgServer() throws IOException {
         httpServer = HttpServer.create(new InetSocketAddress(PORT), 0);
-        nasaBot = new NasaBot();
+        nasaBot = new NasaBot(new NasaApiClient(), new Gson());
 
         httpServer.createContext("/", this::requestHandler);
     }
