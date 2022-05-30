@@ -10,9 +10,9 @@ public class NasaApiClient {
     private final HttpClient nasaClient;
 
     public NasaApiClient() {
-        API_KEY = "DEMO_KEY";
+        API_KEY = BotConfig.getNasaApiToken();
         nasaClient = HttpClient.newHttpClient();
-        apiUrl = "https://api.nasa.gov/planetary";
+        apiUrl = BotConfig.getNasaApiUrl();
     }
 
     public String getAPOD() {

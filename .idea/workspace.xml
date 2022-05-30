@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="feat: скрыть токены">
-      <change afterPath="$PROJECT_DIR$/src/main/java/NasaApiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NasaApod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="feat: вынести настройки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BotConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BotConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NasaApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NasaApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NasaBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NasaBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NgrokClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NgrokClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TelegramClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelegramClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TgServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TgServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -29,10 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="SecondBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="klenars" />
+        <option name="repository" value="ars_nasa_bot" />
+      </RepoCoordinatesHolder>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,19 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Ars/dev/ars_nasa_bot",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ars/dev/ars_nasa_bot&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -81,13 +89,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="HTTP Request.All in generated-requests" />
         <item itemvalue="Application.TelegramClient" />
       </list>
     </recent_temporary>
@@ -103,11 +107,11 @@
       <workItem from="1652882868541" duration="16889000" />
       <workItem from="1652931907864" duration="4106000" />
       <workItem from="1653040740529" duration="28650000" />
-      <workItem from="1653117937290" duration="3654000" />
-      <workItem from="1653209853390" duration="597000" />
-      <workItem from="1653243128061" duration="2162000" />
-      <workItem from="1653296487817" duration="125000" />
-      <workItem from="1653390164769" duration="2217000" />
+      <workItem from="1653117937290" duration="667000" />
+      <workItem from="1653714126818" duration="296000" />
+      <workItem from="1653750779091" duration="783000" />
+      <workItem from="1653852502169" duration="246000" />
+      <workItem from="1653893733275" duration="10954000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1652883121976</created>
@@ -172,12 +176,12 @@
       <option name="project" value="LOCAL" />
       <updated>1653076983326</updated>
     </task>
-    <task id="LOCAL-00010" summary="feat: скрыть токены">
-      <created>1653118728912</created>
+    <task id="LOCAL-00010" summary="feat: вынести настройки">
+      <created>1653932781889</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1653118728912</updated>
+      <updated>1653932781889</updated>
     </task>
     <option name="localTasksCounter" value="11" />
     <servers />
@@ -204,7 +208,7 @@
     <MESSAGE value="feat: Добавить NgrokClient для получения внешнего урл" />
     <MESSAGE value="feat: сделать сериализоацию в объект" />
     <MESSAGE value="feat: добавить реакцию на команду /start" />
-    <MESSAGE value="feat: скрыть токены" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: скрыть токены" />
+    <MESSAGE value="feat: вынести настройки" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: вынести настройки" />
   </component>
 </project>

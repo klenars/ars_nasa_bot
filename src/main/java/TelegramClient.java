@@ -10,9 +10,9 @@ public class TelegramClient {
     private final String TOKEN;
 
     public TelegramClient() {
-        TOKEN = System.getenv("TG_TOKEN");
+        TOKEN = BotConfig.getTgApiToken();
         httpClient = HttpClient.newHttpClient();
-        url = "https://api.telegram.org/bot";
+        url = BotConfig.getTgApiUrl();
 
         setWebhook(NgrokClient.getPublicUrl());
     }

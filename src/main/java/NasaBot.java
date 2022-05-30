@@ -7,10 +7,10 @@ public class NasaBot {
     private final NasaApiClient nasaApiClient;
     private final Gson gson;
 
-    public NasaBot() {
-        telegramClient = new TelegramClient();
-        nasaApiClient = new NasaApiClient();
-        gson = new Gson();
+    public NasaBot(TelegramClient telegramClient, NasaApiClient nasaApiClient, Gson gson) {
+        this.telegramClient = telegramClient;
+        this.nasaApiClient = nasaApiClient;
+        this.gson = gson;
     }
 
     public void updateHandler(String requestBody) {
@@ -21,9 +21,9 @@ public class NasaBot {
             case "/start":
                 sendApod(message);
                 break;
-//            case "/apod":
-//                sendApod(message);
-//                break;
+            case "/botinfo":
+                sayBotInfo(message);
+                break;
             default:
                 sayHello(message);
         }
