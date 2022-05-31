@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="feat: вынести настройки">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +210,7 @@
     <MESSAGE value="feat: сделать сериализоацию в объект" />
     <MESSAGE value="feat: добавить реакцию на команду /start" />
     <MESSAGE value="feat: вынести настройки" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: вынести настройки" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java" />
   </component>
 </project>
