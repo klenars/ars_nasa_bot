@@ -1,50 +1,60 @@
-import com.google.gson.JsonObject;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 public class NasaBot {
     private final TelegramClient telegramClient;
+    private final NasaApiClient nasaApiClient;
+    private final Gson gson;
 
-    public NasaBot() {
-        telegramClient = new TelegramClient();
+    public NasaBot(TelegramClient telegramClient, NasaApiClient nasaApiClient, Gson gson) {
+        this.telegramClient = telegramClient;
+        this.nasaApiClient = nasaApiClient;
+        this.gson = gson;
     }
 
-    public void sendHello(String requestBody) {
-        int chat_id = getChatId(requestBody);
-        telegramClient.sendMessage("Hello!", chat_id);
+    public void updateHandler(String requestBody) {
+        Update update = gson.fromJson(requestBody, Update.class);
+        Message message = update.getMessage();
 
+        switch (message.getText()) {
+            case "/start":
+                sendApod(message);
+                break;
+            case "/botinfo":
+                sayBotInfo(message);
+                break;
+            default:
+                sayHello(message);
+        }
     }
 
-    private int getChatId(String response) {
-        return getMessage(response)
-                .getAsJsonObject("chat")
-                .get("id").getAsInt();
+    private void sendApod(Message message) {
+        int chatId = message.getChatId();
+        String nasaResponse = nasaApiClient.getAPOD();
+        NasaApod apod = gson.fromJson(nasaResponse, NasaApod.class);
+
+        String answer = apod.getTitle() + "\n \n"
+                + apod.getExplanation() + "\n"
+                + apod.getUrl();
+
+        telegramClient.sendMessage(answer, chatId);
     }
 
-    private JsonObject getMessage(String response) {
-        return JsonParser.parseString(response)
+    private void sayBotInfo(Message message) {
+        String response = telegramClient.sendGetMe();
+        JsonElement object = JsonParser.parseString(response)
                 .getAsJsonObject()
-                .getAsJsonObject("message");
+                .get("result");
+
+        User bot = gson.fromJson(object, User.class);
+        int chatId = message.getChatId();
+
+        telegramClient.sendMessage(bot.toPrint(), chatId);
+    }
+
+    private void sayHello(Message message) {
+        int chatId = message.getChatId();
+        telegramClient.sendMessage("Hello!", chatId);
     }
 }
-
-
-// {"update_id":906575370,
-//  "message":{
-//              "message_id":56,
-//              "from":{
-//                      "id":450844544,
-//                      "is_bot":false,
-//                      "first_name":"\u0410\u0440\u0441\u0435\u043d\u0438\u0439",
-//                      "username":"Klen_Ars",
-//                      "language_code":"ru"
-//                      },
-//              "chat":{
-//                      "id":450844544,
-//                      "first_name":"\u0410\u0440\u0441\u0435\u043d\u0438\u0439",
-//                      "username":"Klen_Ars",
-//                      "type":"private"
-//                      },
-//              "date":1653048577,
-//              "text":"1234"
-//              }
-// }
