@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java">
+    <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="fix: Настроить gitignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <workItem from="1653750779091" duration="783000" />
       <workItem from="1653852502169" duration="246000" />
       <workItem from="1653893733275" duration="11723000" />
-      <workItem from="1653979612574" duration="279000" />
+      <workItem from="1653979612574" duration="1434000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1652883121976</created>
@@ -184,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653938626719</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java">
+      <created>1653980035701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653980035701</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: Настроить gitignore">
+      <created>1653980231480</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1653980231480</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +226,7 @@
     <MESSAGE value="feat: добавить реакцию на команду /start" />
     <MESSAGE value="feat: вынести настройки" />
     <MESSAGE value="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/SecondBranch' into SecondBranch&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/BotConfig.java&#10;#&#9;src/main/java/NasaBot.java&#10;#&#9;src/main/java/TgServer.java" />
+    <MESSAGE value="fix: Настроить gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Настроить gitignore" />
   </component>
 </project>
