@@ -37,6 +37,12 @@ build/
 ### Mac OS ###
 .DS_Store
 
+<<<<<<<<< Temporary merge branch 1
+!/src/main/java/Settings.java
+!/.idea/
+!/src/main/resources/config.properties
+=========
 src/main/java/Settings.java
 .idea
-.properties
+src/main/resources/config.properties
+>>>>>>>>> Temporary merge branch 2
