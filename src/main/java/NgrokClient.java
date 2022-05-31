@@ -10,7 +10,7 @@ public class NgrokClient {
     private static final String TOKEN = BotConfig.getNgrokToken();
     private static final String Ngrok_URL = BotConfig.getNgrokUrl();
 
-    static String getPublicUrl() {
+    public static String getPublicUrl() {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()

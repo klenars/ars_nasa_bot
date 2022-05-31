@@ -4,15 +4,15 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class TelegramClient {
+public class TelegramClient implements ApiClient{
     private final HttpClient httpClient;
     private final String url;
     private final String TOKEN;
 
     public TelegramClient() {
-        TOKEN = BotConfig.getTgApiToken();
+        TOKEN = BotConfig.getTelegramApiToken();
         httpClient = HttpClient.newHttpClient();
-        url = BotConfig.getTgApiUrl();
+        url = BotConfig.getTelegramApiUrl();
 
         setWebhook(NgrokClient.getPublicUrl());
     }
@@ -27,7 +27,7 @@ public class TelegramClient {
         sendRequest(request);
     }
 
-    protected String sendGetMe() {
+    public String sendGetMe() {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .uri(URI.create(url + TOKEN + "/getMe"))
@@ -36,7 +36,7 @@ public class TelegramClient {
         return sendRequest(request);
     }
 
-    protected String sendMessage(String text, int chatId) {
+    public String sendMessage(String text, int chatId) {
         HttpRequest request = HttpRequest.newBuilder()
                 .POST(HttpRequest.BodyPublishers.ofString("{\"text\":\"" + text + "\"}"))
                 .uri(URI.create(url + TOKEN + "/sendMessage" + "?chat_id=" + chatId))
@@ -52,6 +52,7 @@ public class TelegramClient {
             if (response.statusCode() != 200) {
                 System.out.println("Сервер вернул ответ: " + response.statusCode());
             }
+            System.out.println(response.body());
             return response.body();
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

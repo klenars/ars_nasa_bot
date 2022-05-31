@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e093752-01ff-45eb-885b-ad8b419e78af" name="Changes" comment="fix: Настроить gitignore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ApiClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BotConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BotConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NgrokClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NgrokClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TelegramClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelegramClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -50,21 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ars/dev/ars_nasa_bot&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Ars/dev/java-sprint2-hw",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
@@ -86,7 +94,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TelegramClient" />
+        <item itemvalue="Application.telegram.TelegramClient" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +114,8 @@
       <workItem from="1653750779091" duration="783000" />
       <workItem from="1653852502169" duration="246000" />
       <workItem from="1653893733275" duration="11723000" />
-      <workItem from="1653979612574" duration="1434000" />
+      <workItem from="1653979612574" duration="1632000" />
+      <workItem from="1653981302528" duration="4947000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1652883121976</created>
@@ -199,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653980231480</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: Настроить gitignore">
+      <created>1653981145439</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1653981145439</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
