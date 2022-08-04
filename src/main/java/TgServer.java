@@ -1,3 +1,4 @@
+import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 
@@ -5,13 +6,13 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 
 public class TgServer {
-    private static final int PORT = 8443;
     private final HttpServer httpServer;
     private final NasaBot nasaBot;
 
     public TgServer() throws IOException {
+        final int PORT = BotConfig.getTgServerPort();
         httpServer = HttpServer.create(new InetSocketAddress(PORT), 0);
-        nasaBot = new NasaBot();
+        nasaBot = new NasaBot(new TelegramClient(), new NasaApiClient(), new Gson());
 
         httpServer.createContext("/", this::requestHandler);
     }
@@ -21,7 +22,7 @@ public class TgServer {
             String requestBody = readRequestBody(exchange);
             exchange.sendResponseHeaders(200, 0);
             System.out.println(requestBody);
-            nasaBot.sendHello(requestBody);
+            nasaBot.updateHandler(requestBody);
 
         } catch (IOException e) {
             System.out.println("Запрос не прочитан!");

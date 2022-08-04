@@ -7,14 +7,15 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class NgrokClient {
-    private static final String TOKEN = "29QmVn9e1QD2zRd1zNr7Xi5vD4E_2X95FRJPAhPhi7gRaSNZa";
+    private static final String TOKEN = BotConfig.getNgrokToken();
+    private static final String Ngrok_URL = BotConfig.getNgrokUrl();
 
-    static String getPublicUrl() {
+    public static String getPublicUrl() {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
-                .uri(URI.create("https://api.ngrok.com/tunnels"))
+                .uri(URI.create(Ngrok_URL))
                 .header("Authorization", "Bearer " + TOKEN)
                 .header("Ngrok-Version", "2")
                 .version(HttpClient.Version.HTTP_1_1)
